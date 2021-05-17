@@ -5,12 +5,15 @@
 
 #define MAX_LIMIT 50
 
+void printGreeting();
+
 int main(int argc, char *argv[]) {
 
     char name[MAX_LIMIT];
     char confirm[MAX_LIMIT];
 
-    printf("Welcome to the Solar System!\nThere are 9 planets to explore.\nWhat is your name?\n");
+    printGreeting();
+    printf("What is your name?\n");
     fgets(name, sizeof(name), stdin);
     name[strcspn(name, "\n")] = 0;
     printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\nLets go on an adventure!\n", name);
@@ -21,10 +24,10 @@ int main(int argc, char *argv[]) {
     while(strcmp(confirm, "Y") != 0 || strcmp(confirm, "N") != 0) {
         
         if(strcmp(confirm, "Y") == 0) {
-            printf("Barf yes\n");
+            printf("You chose: %s\n", confirm);
             break;
         } else if(strcmp(confirm, "N") == 0) {
-            printf("Barf no\n");
+            printf("You chose: %s\n", confirm);
             break;
         } else {
             printf("Sorry, I didn't get that.\n");
@@ -35,4 +38,9 @@ int main(int argc, char *argv[]) {
     }
 
     return 0;
+}
+
+void printGreeting() {
+    printf("Welcome to the Solar System!\n");
+    printf("There are 9 planets to explore.\n");
 }
