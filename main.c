@@ -5,16 +5,17 @@
 
 #define MAX_LIMIT 50
 
+void printWelcome();
+char* responseFor();
 void printGreeting();
-void printName();
 
 int main(int argc, char *argv[]) {
 
     char confirm[MAX_LIMIT];
     char planetName[MAX_LIMIT];
 
-    printGreeting();
-    printName();
+    printWelcome();
+    printGreeting(responseFor("What is your name?"));
 
     printf("Lets go on an adventure!\n");
     printf("Shall I randomly choose a planet for you to visit? (Y or N)\n");
@@ -43,16 +44,19 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-void printGreeting() {
+void printWelcome() {
     printf("Welcome to the Solar System!\n");
     printf("There are 9 planets to explore.\n");
 }
 
-void printName() {
-    char name[MAX_LIMIT];
+char* responseFor(char *astring) {
+    static char response[MAX_LIMIT];
+    printf("%s\n", astring);
+    fgets(response, sizeof(response), stdin);
+    response[strcspn(response, "\n")] = 0;
+    return response;
+}
 
-    printf("What is your name?\n");
-    fgets(name, sizeof(name), stdin);
-    name[strcspn(name, "\n")] = 0;
-    printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", name);
+void printGreeting(char *astring) {
+    printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", astring);
 }
