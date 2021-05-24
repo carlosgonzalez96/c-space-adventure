@@ -8,6 +8,7 @@
 void printWelcome();
 char* responseFor();
 void printGreeting();
+void travelTo();
 
 int main(int argc, char *argv[]) {
 
@@ -28,10 +29,7 @@ int main(int argc, char *argv[]) {
             printf("Traveling to Venus...\n");
             break;
         } else if(strcmp(confirm, "N") == 0) {
-            printf("Name the planet you would like to visit.\n");
-            fgets(planetName, sizeof(planetName), stdin);
-            planetName[strcspn(planetName, "\n")] = 0;
-            printf("Traveling to %s...\n", planetName);
+            travelTo(responseFor("Name the planet you would like to visit."));
             break;
         } else {
             printf("Sorry, I didn't get that.\n");
@@ -59,4 +57,8 @@ char* responseFor(char *astring) {
 
 void printGreeting(char *astring) {
     printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", astring);
+}
+
+void travelTo(char *string) {
+    printf("Traveling to %s...\n", string);
 }
