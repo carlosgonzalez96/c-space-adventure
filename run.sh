@@ -1,2 +1,2 @@
-gcc -o main main.c planets.c
+gcc -o main main.c greetings.c
 ./main
