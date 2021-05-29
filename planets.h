@@ -2,6 +2,9 @@
 
 #define PLANETS_H
 
+#include <stdio.h>
+#include <string.h>
+
 #define MAX_LIMIT 50
 
 void printWelcome();
