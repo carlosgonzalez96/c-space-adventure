@@ -2,15 +2,7 @@
 //author: Carlos Gonzalez
 #include <stdio.h>
 #include <string.h>
-
-#define MAX_LIMIT 50
-
-void printWelcome();
-char* responseFor();
-void printGreeting();
-void travelTo();
-void travelGuide();
-void travelToRandomPlanet();
+#include "planets.h"
 
 int main(int argc, char *argv[]) {
 
@@ -26,16 +18,16 @@ void printWelcome() {
     printf("There are 9 planets to explore.\n");
 }
 
-char* responseFor(char *astring) {
+char* responseFor(char *aString) {
     static char response[MAX_LIMIT];
-    printf("%s\n", astring);
+    printf("%s\n", aString);
     fgets(response, sizeof(response), stdin);
     response[strcspn(response, "\n")] = 0;
     return response;
 }
 
-void printGreeting(char *astring) {
-    printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", astring);
+void printGreeting(char *aString) {
+    printf("Nice to meet you, %s. My name is Eliza, I'm an old friend of Alexa.\n", aString);
 }
 
 void travelTo(char *string) {
