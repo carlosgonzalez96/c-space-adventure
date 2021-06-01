@@ -1,6 +1,6 @@
 #include "planets.h"
 
-void travelGuide() {
+void travelGuide(char* file) {
     char confirm[MAX_LIMIT];
 
     printf("Lets go on an adventure!\n");
@@ -11,7 +11,7 @@ void travelGuide() {
     while(strcmp(confirm, "Y") != 0 || strcmp(confirm, "N") != 0) {
 
         if(strcmp(confirm, "Y") == 0) {
-            travelToRandomPlanet();
+            travelToRandomPlanet(file);
             break;
         } else if(strcmp(confirm, "N") == 0) {
             travelTo(responseFor("Name the planet you would like to visit."));

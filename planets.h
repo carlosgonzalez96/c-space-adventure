@@ -6,8 +6,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <errno.h>
 
-#define MAX_LIMIT 50
+#define MAX_LIMIT 200
 
 void printWelcome();
 char* responseFor();

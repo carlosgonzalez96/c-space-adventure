@@ -1,6 +1,6 @@
 #include "planets.h"
 
-void travelToRandomPlanet() {
+void travelToRandomPlanet(char* file) {
 
     const char* planets[9] = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"};
     
@@ -8,4 +8,5 @@ void travelToRandomPlanet() {
     int nandomPlanet = rand() % 10 + 1;
 
     printf("Traveling to %s...\n", planets[nandomPlanet]);
+    
 }
