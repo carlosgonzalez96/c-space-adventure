@@ -5,7 +5,6 @@
 //refrence: https://stackoverflow.com/questions/174531/how-to-read-the-content-of-a-file-to-a-string-in-c
 
 void travelTo(char *string, char* file) {
-    //printf("Traveling to %s...\n", string);
     char *planet_names[MAX_LIMIT];
     char *planet_descriptions[MAX_LIMIT];
  
