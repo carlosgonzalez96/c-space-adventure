@@ -1,6 +1,6 @@
 //C space adventure
 //author: Carlos Gonzalez
-#include "planets.h"
+#include "headers.h"
 
 int main(int argc, char *argv[]) { 
 

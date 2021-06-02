@@ -1,4 +1,4 @@
-#include "planets.h"
+#include "headers.h"
 
 void travelGuide(char* file) {
     char confirm[MAX_LIMIT];

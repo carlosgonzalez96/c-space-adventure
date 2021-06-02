@@ -1,4 +1,4 @@
-#include "planets.h"
+#include "headers.h"
 #include "cJSON.h"
 
 //refrence: https://spacesciencesoftware.wordpress.com/2013/09/10/a-good-way-to-read-json-with-c/

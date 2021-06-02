@@ -1,4 +1,4 @@
-#include "planets.h"
+#include "headers.h"
 
 void printWelcome() {
     printf("Welcome to the Solar System!\n");
