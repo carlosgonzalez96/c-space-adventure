@@ -1,6 +1,8 @@
 #include "planets.h"
 #include "cJSON.h"
 
+//refrece: https://spacesciencesoftware.wordpress.com/2013/09/10/a-good-way-to-read-json-with-c/
+
 void travelToRandomPlanet(char* file) {
     char *planet_names[MAX_LIMIT];
     char *planet_descriptions[MAX_LIMIT];
