@@ -14,7 +14,7 @@ void travelGuide(char* file) {
             travelToRandomPlanet(file);
             break;
         } else if(strcmp(confirm, "N") == 0) {
-            travelTo(responseFor("Name the planet you would like to visit."));
+            travelTo(responseFor("Name the planet you would like to visit."), file);
             break;
         } else {
             printf("Sorry, I didn't get that.\n");
